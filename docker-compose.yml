@@ -3,12 +3,12 @@ services:
     php-apache-environment:
         container_name: php-apache
         build:
-            context: E:/xampp/htdocs/phpjenkins
+            context: /home/ubuntu/jenkins/workspace/Git
             dockerfile: Dockerfile
         depends_on:
             - db
         volumes:
-            - E:/xampp/htdocs/phpjenkins:/var/www/html/
+            - /home/ubuntu/jenkins/workspace/Git
         ports:
             - 8000:80
     db:
